@@ -1,0 +1,113 @@
+<html>
+<head>
+  <title>Ice Cream Order</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction:row;
+      justify-content:center;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .menu, .form-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .menu img {
+      width: 300;
+      border-radius: 10px;
+    }
+
+    .ice-cream {
+      margin-bottom: 20px;
+    }
+
+    .form-box {
+      max-width: 300px;
+    }
+
+    .form-box h2 {
+      text-align: center;
+    }
+
+    .form-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .form-box button {
+      background-color: #ff5c8d;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-box button:hover {
+      background-color: #ff3970;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left-column"></div>
+    <div class="menu">
+      <div class="ice-cream">
+        <img src="https://carveyourcraving.com/wp-content/uploads/2021/06/chocolate-icecream-in-an-icecream-maker.jpg" alt="Chocolate ">
+        <p><strong>Chocolate </strong></p>
+      </div>
+      <div class="ice-cream">
+        <img src="https://gimmethatflavor.com/wp-content/uploads/2021/02/Red-Velvet-Ice-Cream-19.jpg" alt="Red Velvet">
+        <p><strong>Red Velvet</strong></p>
+      </div>
+      <div class="ice-cream">
+        <img src="https://images-tastehub.mdlzapps.cloud/images/1c91b017-c893-4b5f-a95f-f54ee7849e84.jpg" alt="Berry Delight">
+        <p><strong>Berry Delight</strong></p>
+      </div>
+    </div>
+
+    <div class="form-box">
+      <h2>Ice Cream Order</h2>
+      <img src="https://img.pikbest.com/png-images/20241229/simple-line-art-illustration-of-an-ice-cream-cone_11317215.png!bw700" width="50" style="display:block; margin:auto;" alt="ice cream">
+      <input type="text" id="name" placeholder="Your Name">
+      <input type="text" id="phone" placeholder="Phone Number">
+      <input type="text" id="flavour" placeholder="Ice Cream Name">
+      <input type="number" id="quantity" placeholder="Quantity">
+      <button onclick="showOrder()">ORDER</button>
+    </div>
+  </div>
+
+  <script>
+    function showOrder() {
+      var name = document.getElementById("name").value;
+      var phone = document.getElementById("phone").value;
+      var flavour = document.getElementById("flavour").value;
+      var quantity = document.getElementById("quantity").value;
+
+      console.log("Name: " + name);
+      console.log("Phone Number: " + phone);
+      console.log("Flavour: " + flavour);
+      console.log("Quantity: " + quantity);
+    }
+  </script>
+
+</body>
+</html>
